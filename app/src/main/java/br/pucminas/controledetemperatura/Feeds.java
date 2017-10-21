@@ -50,19 +50,11 @@ public class Feeds {
         if(created_at != null){
             SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy HH:mm");
             dataFormatada = formatoData.format(created_at);
-        }
 
-        if (field1.contains("e")){
-            int indiceChar = field1.indexOf("e");
-            String temperatura = field1.substring(0,indiceChar);
-            String umidade = field1.substring(indiceChar + 1,field1.length());
+            return field1 + " | Data: " + dataFormatada;
 
-            return "Temp: " + temperatura + " | Umi: " + umidade + " | Data: " + dataFormatada;
         }else{
-
-            return "Temp e Umi: " + field1 + " | Data: " + dataFormatada;
-
+            return field1;
         }
-
     }
 }
